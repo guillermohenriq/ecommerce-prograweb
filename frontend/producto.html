@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administración de productos - TechStore</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="barra">
+        <a href="producto.html" class="marca">
+          <img src="img/logo.svg" alt="Logo de TechStore" />
+          <div>
+            <h1>TechStore</h1>
+            <p class="lema">Panel de administración</p>
+          </div>
+        </a>
+        <nav>
+          <a href="index.html">Ver tienda</a>
+          <a href="login.html" class="cerrar-sesion">Cerrar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="barra-admin">
+      <div class="barra">
+        <div>
+          <a href="producto.html">Productos</a>
+          <a href="Reportes.html">Reportes</a>
+        </div>
+        <span class="sesion"></span>
+      </div>
+    </div>
+
+    <main class="contenedor contenedor-ancho">
+      <div class="encabezado-pagina">
+        <h2>Mantenimiento de productos</h2>
+        <a href="nuevoProducto.html" class="boton auto"
+          >Agregar nuevo producto</a
+        >
+      </div>
+
+      <div class="tabla-scroll">
+        <table class="tabla tabla-productos">
+          <caption>
+            Productos registrados en el catálogo.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Imagen</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Stock</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      <div class="pie">
+        <div>
+          <h4>TechStore</h4>
+          <p>Panel de administración</p>
+        </div>
+        <div>
+          <h4>Información legal</h4>
+          <ul>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Políticas de Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="derechos">
+        &copy; 2026 TechStore - Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

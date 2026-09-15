@@ -354,14 +354,6 @@ nav a.activa {
     margin: 10px 0;
 }
 
-.detalle-info .precio-anterior {
-    font-size: 17px;
-    color: var(--texto-suave);
-    text-decoration: line-through;
-    font-weight: normal;
-    margin-left: 10px;
-}
-
 .disponible {
     color: #1b7f4f;
     font-weight: bold;
@@ -385,18 +377,6 @@ nav a.activa {
     border-radius: 6px;
     font-family: var(--fuente);
     font-size: 15px;
-}
-
-.etiqueta {
-    display: inline-block;
-    background-color: var(--rojo);
-    color: var(--blanco);
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 4px 10px;
-    border-radius: 4px;
 }
 
 .tabla {
@@ -435,6 +415,18 @@ nav a.activa {
 .tabla .numero {
     text-align: right;
     white-space: nowrap;
+}
+
+.tabla tfoot th,
+.tabla tfoot td {
+    background-color: var(--fondo);
+    font-weight: bold;
+    color: var(--azul-oscuro);
+    border-bottom: none;
+}
+
+.filtros-reporte {
+    margin-bottom: 10px;
 }
 
 .tabla .miniatura {

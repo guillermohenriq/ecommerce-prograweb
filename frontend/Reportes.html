@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reportes de compras - TechStore</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="barra">
+        <a href="producto.html" class="marca">
+          <img src="img/logo.svg" alt="Logo de TechStore" />
+          <div>
+            <h1>TechStore</h1>
+            <p class="lema">Panel de administración</p>
+          </div>
+        </a>
+        <nav>
+          <a href="index.html">Ver tienda</a>
+          <a href="login.html" class="cerrar-sesion">Cerrar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="barra-admin">
+      <div class="barra">
+        <div>
+          <a href="producto.html">Productos</a>
+          <a href="Reportes.html">Reportes</a>
+        </div>
+        <span class="sesion"></span>
+      </div>
+    </div>
+
+    <main class="contenedor contenedor-ancho">
+      <div class="encabezado-pagina">
+        <h2>Reporte de compras</h2>
+      </div>
+
+      <form class="filtros-reporte">
+        <fieldset>
+          <legend>Filtros de búsqueda</legend>
+          <div class="formulario formulario-doble">
+            <div class="campo">
+              <label for="fecha">Fecha de la compra</label>
+              <input type="date" id="fecha" name="fecha" />
+              <p class="ayuda">Deja el campo vacío para ver todas las fechas.</p>
+            </div>
+
+            <div class="campo">
+              <label for="id">Número de compra</label>
+              <input
+                type="number"
+                id="id"
+                name="id"
+                placeholder="Ej. 5"
+                min="1"
+                step="1"
+              />
+            </div>
+          </div>
+
+          <div class="acciones">
+            <button type="reset" class="boton secundario auto">
+              Limpiar filtros
+            </button>
+            <button type="submit" class="boton auto">Buscar</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <div class="tabla-scroll">
+        <table class="tabla tabla-reporte">
+          <caption>
+            Compras registradas en la tienda.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">No. de compra</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="2">Total del período</th>
+              <td class="numero total-reporte">L. 0.00</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      <div class="pie">
+        <div>
+          <h4>TechStore</h4>
+          <p>Panel de administración</p>
+        </div>
+        <div>
+          <h4>Información legal</h4>
+          <ul>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Políticas de Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="derechos">
+        &copy; 2026 TechStore - Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

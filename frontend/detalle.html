@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalle del producto - TechStore</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="barra">
+        <a href="index.html" class="marca">
+          <img src="img/logo.svg" alt="Logo de TechStore" />
+          <div>
+            <h1>TechStore</h1>
+            <p class="lema">Celulares y tecnología</p>
+          </div>
+        </a>
+        <nav>
+          <a href="index.html">Catálogo</a>
+          <a href="carrito.html">Carrito (0)</a>
+          <a href="login.html">Administración</a>
+        </nav>
+      </div>
+    </header>
+
+    <p class="migas">
+      <a href="index.html">Inicio</a> / <a href="index.html">Catálogo</a> /
+      <span class="actual"></span>
+    </p>
+
+    <main class="contenedor">
+      <div class="detalle">
+        <div class="detalle-imagen">
+          <img src="img/logo.svg" alt="" />
+          <div class="galeria"></div>
+        </div>
+
+        <div class="detalle-info">
+          <p class="marca-producto"></p>
+          <h2></h2>
+
+          <p class="precio"></p>
+
+          <p>
+            <span class="disponible"></span><span class="existencias"></span>
+          </p>
+
+          <p class="descripcion"></p>
+
+          <div class="grupo-cantidad">
+            <label for="cantidad">Cantidad</label>
+            <select id="cantidad" name="cantidad"></select>
+          </div>
+
+          <a href="carrito.html" class="boton">Agregar al carrito</a>
+          <div class="acciones">
+            <a href="index.html" class="boton secundario auto"
+              >Seguir comprando</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <h3 class="titulo-seccion" style="margin-top: 35px">Ficha técnica</h3>
+      <div class="tabla-scroll">
+        <table class="tabla tabla-ficha">
+          <caption>
+            Especificaciones declaradas por el fabricante.
+          </caption>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      <div class="pie">
+        <div>
+          <h4>TechStore</h4>
+          <p>Celulares, accesorios y tecnología<br />Tegucigalpa, Honduras</p>
+        </div>
+        <div>
+          <h4>Información legal</h4>
+          <ul>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Políticas de Privacidad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>Tel. (504) 2200-1234</li>
+            <li>ventas@techstore.hn</li>
+          </ul>
+        </div>
+      </div>
+      <p class="derechos">
+        &copy; 2026 TechStore - Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

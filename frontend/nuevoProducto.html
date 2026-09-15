@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuevo producto - TechStore</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="barra">
+        <a href="producto.html" class="marca">
+          <img src="img/logo.svg" alt="Logo de TechStore" />
+          <div>
+            <h1>TechStore</h1>
+            <p class="lema">Panel de administración</p>
+          </div>
+        </a>
+        <nav>
+          <a href="index.html">Ver tienda</a>
+          <a href="login.html" class="cerrar-sesion">Cerrar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="barra-admin">
+      <div class="barra">
+        <div>
+          <a href="producto.html">Productos</a>
+          <a href="Reportes.html">Reportes</a>
+        </div>
+        <span class="sesion"></span>
+      </div>
+    </div>
+
+    <p class="migas"><a href="producto.html">Productos</a> / Nuevo producto</p>
+
+    <main class="contenedor">
+      <div class="encabezado-pagina">
+        <h2>Agregar nuevo producto</h2>
+        <a href="producto.html" class="boton secundario auto"
+          >Volver al listado</a
+        >
+      </div>
+
+      <form action="producto.html" method="get">
+        <fieldset>
+          <legend>Información general</legend>
+          <div class="formulario formulario-doble">
+            <div class="campo campo-ancho">
+              <label for="nombre"
+                >Nombre del producto <span class="obligatorio">*</span></label
+              >
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Ej. iPhone 15 Pro Max 256 GB"
+                minlength="5"
+                maxlength="80"
+                required
+              />
+              <p class="ayuda">Entre 5 y 80 caracteres.</p>
+            </div>
+
+            <div class="campo">
+              <label for="marca"
+                >Marca <span class="obligatorio">*</span></label
+              >
+              <input
+                type="text"
+                id="marca"
+                name="marca"
+                placeholder="Ej. Apple"
+                maxlength="40"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label for="categoria"
+                >Categoría <span class="obligatorio">*</span></label
+              >
+              <select id="categoria" name="categoria" required>
+                <option value="">Selecciona una categoría</option>
+                <option value="celulares">Celulares</option>
+                <option value="tablets">Tablets</option>
+                <option value="audio">Audio</option>
+                <option value="wearables">Wearables</option>
+                <option value="accesorios">Accesorios</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="precio"
+                >Precio (Lempiras) <span class="obligatorio">*</span></label
+              >
+              <input
+                type="number"
+                id="precio"
+                name="precio"
+                placeholder="0.00"
+                min="1"
+                max="200000"
+                step="0.01"
+                required
+              />
+              <p class="ayuda">Debe ser mayor que cero.</p>
+            </div>
+
+            <div class="campo">
+              <label for="stock"
+                >Cantidad en existencia
+                <span class="obligatorio">*</span></label
+              >
+              <input
+                type="number"
+                id="stock"
+                name="stock"
+                placeholder="0"
+                min="0"
+                max="9999"
+                step="1"
+                required
+              />
+            </div>
+
+            <div class="campo campo-ancho">
+              <label>Estado <span class="obligatorio">*</span></label>
+              <div class="opciones">
+                <label for="activo">
+                  <input
+                    type="radio"
+                    id="activo"
+                    name="estado"
+                    value="activo"
+                    checked
+                    required
+                  />
+                  Activo
+                </label>
+                <label for="inactivo">
+                  <input
+                    type="radio"
+                    id="inactivo"
+                    name="estado"
+                    value="inactivo"
+                  />
+                  Inactivo
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Descripción e imagen</legend>
+          <div class="formulario">
+            <div class="campo">
+              <label for="descripcionCorta"
+                >Descripción corta <span class="obligatorio">*</span></label
+              >
+              <input
+                type="text"
+                id="descripcionCorta"
+                name="descripcionCorta"
+                placeholder="Ej. Titanio, chip A17 Pro y cámara de 48 MP."
+                minlength="10"
+                maxlength="120"
+                required
+              />
+              <p class="ayuda">
+                Es la que aparece en la tarjeta del catálogo. Máximo 120
+                caracteres.
+              </p>
+            </div>
+
+            <div class="campo">
+              <label for="descripcionTecnica"
+                >Descripción técnica <span class="obligatorio">*</span></label
+              >
+              <textarea
+                id="descripcionTecnica"
+                name="descripcionTecnica"
+                placeholder="Detalla materiales, procesador, cámaras y demás características."
+                minlength="20"
+                maxlength="800"
+                required
+              ></textarea>
+            </div>
+
+            <div class="campo">
+              <label for="imagen"
+                >Imagen del producto <span class="obligatorio">*</span></label
+              >
+              <input
+                type="file"
+                id="imagen"
+                name="imagen"
+                accept="image/*"
+                required
+              />
+              <p class="ayuda">
+                Formatos JPG, PNG o SVG. Se recomienda 800 x 800 píxeles.
+              </p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Atributos específicos</legend>
+          <div class="formulario formulario-doble">
+            <div class="campo">
+              <label for="pantalla">Tamaño de pantalla</label>
+              <input
+                type="text"
+                id="pantalla"
+                name="pantalla"
+                placeholder="Ej. 6.7 pulgadas"
+                maxlength="40"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="almacenamiento">Almacenamiento</label>
+              <select id="almacenamiento" name="almacenamiento">
+                <option value="">No aplica</option>
+                <option value="64 GB">64 GB</option>
+                <option value="128 GB">128 GB</option>
+                <option value="256 GB">256 GB</option>
+                <option value="512 GB">512 GB</option>
+                <option value="1 TB">1 TB</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="ram">Memoria RAM</label>
+              <select id="ram" name="ram">
+                <option value="">No aplica</option>
+                <option value="4 GB">4 GB</option>
+                <option value="6 GB">6 GB</option>
+                <option value="8 GB">8 GB</option>
+                <option value="12 GB">12 GB</option>
+                <option value="16 GB">16 GB</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="color">Color</label>
+              <input
+                type="text"
+                id="color"
+                name="color"
+                placeholder="Ej. Titanio natural"
+                maxlength="30"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="peso">Peso (gramos)</label>
+              <input
+                type="number"
+                id="peso"
+                name="peso"
+                placeholder="0"
+                min="1"
+                max="5000"
+                step="1"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="garantia">Garantía (meses)</label>
+              <input
+                type="number"
+                id="garantia"
+                name="garantia"
+                placeholder="12"
+                min="0"
+                max="60"
+                step="1"
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="acciones">
+          <a href="producto.html" class="boton secundario auto">Cancelar</a>
+          <button type="reset" class="boton secundario auto">
+            Limpiar formulario
+          </button>
+          <button type="submit" class="boton auto">Guardar producto</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="pie">
+        <div>
+          <h4>TechStore</h4>
+          <p>Panel de administración</p>
+        </div>
+        <div>
+          <h4>Información legal</h4>
+          <ul>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Políticas de Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="derechos">
+        &copy; 2026 TechStore - Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
