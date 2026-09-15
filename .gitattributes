@@ -1,0 +1,10 @@
+# Normaliza los finales de linea para que el repositorio sea consistente
+# sin importar si se trabaja desde Windows, macOS o Linux.
+* text=auto eol=lf
+
+# Archivos binarios: git no debe tocarlos.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.pdf  binary
